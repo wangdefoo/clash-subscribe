@@ -2,54 +2,117 @@ allow-lan: true
 log-level: info
 mixed-port: 7890
 mode: Rule
+
 proxies:
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  name: dongtaiwang.com_hysteria_0
-  port: 20001
-  protocol: udp
-  server: 51.159.107.20
-  skip-cert-verify: true
-  sni: apple.com
+# hysteria UDP 节点
+- name: hysteria_0
   type: hysteria
+  server: 51.159.107.20
+  port: 20001
+  auth-str: dongtaiwang.com
+  protocol: udp
+  down: 55 Mbps
   up: 11 Mbps
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_tuic_0
-  password: dongtaiwang.com
-  port: 23556
-  reduce-rtt: true
+  skip-cert-verify: true
+  alpn:
+    - h3
+  sni: apple.com
+- name: hysteria_1
+  type: hysteria
+  server: 2001:bc8:1203:25::1
+  port: 20001
+  auth-str: dongtaiwang.com
+  protocol: udp
+  down: 55 Mbps
+  up: 11 Mbps
+  skip-cert-verify: true
+  alpn:
+    - h3
+  sni: apple.com
+# 依次类推，保留 hysteria_2 ~ hysteria_4
+- name: hysteria_2
+  type: hysteria
+  server: 2001:bc8:1203:25::2
+  port: 20001
+  auth-str: dongtaiwang.com
+  protocol: udp
+  down: 55 Mbps
+  up: 11 Mbps
+  skip-cert-verify: true
+  alpn:
+    - h3
+  sni: apple.com
+- name: hysteria_3
+  type: hysteria
+  server: 2001:bc8:1203:25::3
+  port: 20001
+  auth-str: dongtaiwang.com
+  protocol: udp
+  down: 55 Mbps
+  up: 11 Mbps
+  skip-cert-verify: true
+  alpn:
+    - h3
+  sni: apple.com
+- name: hysteria_4
+  type: hysteria
+  server: 2001:bc8:1203:25::4
+  port: 20001
+  auth-str: dongtaiwang.com
+  protocol: udp
+  down: 55 Mbps
+  up: 11 Mbps
+  skip-cert-verify: true
+  alpn:
+    - h3
+  sni: apple.com
+
+# tuic 节点
+- name: tuic_0
+  type: tuic
   server: 62.210.10.140
+  port: 23556
+  password: dongtaiwang.com
+  congestion-controller: bbr
+  reduce-rtt: true
+  udp-relay-mode: native
   skip-cert-verify: true
   sni: bing.com
-  type: tuic
-  udp-relay-mode: native
+  alpn:
+    - h3
   uuid: e732a82b-612f-415d-a9f8-e4b1df37d066
-- client-fingerprint: chrome
-  flow: null
-  grpc-opts:
-    grpc-service-name: FhwHiFzK
-  name: dongtaiwang.com_vless_0
-  network: grpc
+
+# vless 节点
+- name: vless_0
+  type: vless
+  server: 2001:bc8:32d7:158::5
   port: 10033
+  uuid: 56618bde-5a09-4ef8-ae56-6e7a8d69ec67
+  network: grpc
+  tls: true
+  udp: true
+  client-fingerprint: chrome
   reality-opts:
     public-key: m1ORavmKKsF8kn6JfNF1m35wRORu8c6YLyxpSfyiYQ0
     short-id: dfdfb0e2e2d400c4
-  server: 2001:bc8:32d7:158::5
+  grpc-opts:
+    grpc-service-name: FhwHiFzK
+  alpn:
+    - h3
   servername: nijigen-works.jp
-  tls: true
-  type: vless
-  udp: true
-  uuid: 56618bde-5a09-4ef8-ae56-6e7a8d69ec67
+  flow: null
+
 proxy-groups:
 - name: 🚀 节点选择
-  proxies:
-  - dongtaiwang.com_hysteria_0
-  - dongtaiwang.com_tuic_0
-  - dongtaiwang.com_vless_0
   type: select
+  proxies:
+    - hysteria_0
+    - hysteria_1
+    - hysteria_2
+    - hysteria_3
+    - hysteria_4
+    - tuic_0
+    - vless_0
+
 rules:
 - MATCH,🚀 节点选择
