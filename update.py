@@ -49,7 +49,7 @@ for line in open("sources.txt"):
 # 去重
 unique = {f"{p['server']}:{p['port']}": p for p in all_proxies}.values()
 
-# 输出 clash.yaml 到仓库根目录
+# 输出 clash.yaml 到根目录
 config = {
     "mixed-port": 7890,
     "allow-lan": True,
@@ -65,4 +65,5 @@ config = {
 
 with open("clash.yaml", "w", encoding="utf-8") as f:
     yaml.safe_dump(config, f, allow_unicode=True)
+
 print("✅ clash.yaml 生成完成")
