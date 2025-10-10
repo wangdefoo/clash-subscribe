@@ -1,56 +1,68 @@
-import requests
-import yaml
-from pathlib import Path
+import requests, yaml, json
 
-OUTPUT_FILE = Path("clash.yaml")
-
-# 读取节点 URL
-with open("sources.txt", "r", encoding="utf-8") as f:
-    urls = [line.strip() for line in f if line.strip() and not line.startswith("#")]
-
-all_proxies = []
-
-def fetch_yaml(url):
+def fetch(url):
     try:
         r = requests.get(url, timeout=10)
         r.raise_for_status()
-        data = yaml.safe_load(r.text)
+        print(f"✓ fetched {url}")
+        return r.text
+    except Exception as e:
+        print(f"✗ failed {url}: {e}")
+        return None
+
+def parse(content):
+    try:
+        data = yaml.safe_load(content)
         if "proxies" in data:
             return data["proxies"]
-    except Exception as e:
-        print(f"✗ 获取 {url} 失败: {e}")
+    except:
+        pass
+    try:
+        data = json.loads(content)
+        if "outbounds" in data:
+            proxies = []
+            for o in data["outbounds"]:
+                if o.get("protocol") == "vless":
+                    v = o["settings"]["vnext"][0]
+                    u = v["users"][0]
+                    proxies.append({
+                        "name": v["address"],
+                        "type": "vless",
+                        "server": v["address"],
+                        "port": v["port"],
+                        "uuid": u["id"],
+                        "tls": True,
+                    })
+            return proxies
+    except:
+        pass
     return []
 
-for url in urls:
-    proxies = fetch_yaml(url)
-    if proxies:
-        all_proxies.extend(proxies)
-        print(f"✓ 成功抓取 {len(proxies)} 个节点: {url}")
-    else:
-        print(f"⚠️ 未抓取到节点: {url}")
+all_proxies = []
+for line in open("sources.txt"):
+    url = line.strip()
+    if not url: continue
+    content = fetch(url)
+    if content:
+        all_proxies += parse(content)
 
 # 去重
 unique = {f"{p['server']}:{p['port']}": p for p in all_proxies}.values()
-unique = list(unique)
 
-# 生成 clash.yaml
+# 输出 clash.yaml 到仓库根目录
 config = {
     "mixed-port": 7890,
     "allow-lan": True,
     "mode": "Rule",
     "log-level": "info",
-    "proxies": unique,
+    "proxies": list(unique),
     "proxy-groups": [
-        {
-            "name": "🚀 节点选择",
-            "type": "select",
-            "proxies": [p["name"] for p in unique]
-        }
+        {"name": "🚀 节点选择", "type": "select",
+         "proxies": [p["name"] for p in unique]},
     ],
     "rules": ["MATCH,🚀 节点选择"]
 }
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+with open("clash.yaml", "w", encoding="utf-8") as f:
     yaml.safe_dump(config, f, allow_unicode=True)
-
-print(f"\n✅ clash.yaml 已生成，共 {len(unique)} 个节点")
+print("✅ clash.yaml 生成完成")
