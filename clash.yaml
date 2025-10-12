@@ -20,9 +20,9 @@ proxies:
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: dongtaiwang.com_1
-  port: 20001
+  port: 30011
   protocol: udp
-  server: 2001:bc8:1203:25::1
+  server: 62.210.11.74
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
