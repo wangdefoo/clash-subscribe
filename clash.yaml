@@ -5,28 +5,31 @@ mode: Rule
 proxies:
 - alpn:
   - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
+  congestion-controller: bbr
   name: dongtaiwang.com_0
-  port: 20001
-  protocol: udp
+  password: dongtaiwang.com
+  port: 10088
+  reduce-rtt: true
   server: 51.159.107.20
   skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  up: 11 Mbps
+  sni: bing.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 79529c4a-4028-4701-a6d6-4e94b78b50fd
 - alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  min-idle-session: 0
   name: dongtaiwang.com_1
-  port: 30011
-  protocol: udp
+  password: dongtaiwang.com
+  port: 8443
   server: 62.210.11.74
   skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  up: 11 Mbps
+  type: anytls
+  udp: true
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -64,18 +67,19 @@ proxies:
   type: hysteria
   up: 11 Mbps
 - alpn:
-  - h3
-  congestion-controller: bbr
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  min-idle-session: 0
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 23556
-  reduce-rtt: true
+  port: 8443
   server: 62.210.10.140
   skip-cert-verify: true
-  sni: bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: e732a82b-612f-415d-a9f8-e4b1df37d066
+  type: anytls
+  udp: true
 - alpn:
   - h3
   auth-str: dongtaiwang.com
