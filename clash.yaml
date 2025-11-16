@@ -8,7 +8,7 @@ proxies:
   congestion-controller: bbr
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 10088
+  port: 55255
   reduce-rtt: true
   server: 51.159.107.20
   skip-cert-verify: true
@@ -37,7 +37,7 @@ proxies:
   name: dongtaiwang.com_2
   port: 20001
   protocol: udp
-  server: 2001:bc8:1203:25::2
+  server: 51.159.107.20
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
