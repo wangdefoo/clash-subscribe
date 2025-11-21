@@ -8,14 +8,14 @@ proxies:
   congestion-controller: bbr
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 55255
+  port: 50088
   reduce-rtt: true
-  server: 51.159.107.20
+  server: 89.144.35.230
   skip-cert-verify: true
   sni: bing.com
   type: tuic
   udp-relay-mode: native
-  uuid: 79529c4a-4028-4701-a6d6-4e94b78b50fd
+  uuid: 93959440-4f83-4352-b939-906b1fd3fa59
 - alpn:
   - h2
   - http/1.1
