@@ -8,14 +8,14 @@ proxies:
   congestion-controller: bbr
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 55255
+  port: 50088
   reduce-rtt: true
-  server: 51.159.107.20
+  server: 62.210.99.62
   skip-cert-verify: true
   sni: bing.com
   type: tuic
   udp-relay-mode: native
-  uuid: 79529c4a-4028-4701-a6d6-4e94b78b50fd
+  uuid: 93959440-4f83-4352-b939-906b1fd3fa59
 - alpn:
   - h2
   - http/1.1
@@ -37,7 +37,7 @@ proxies:
   name: dongtaiwang.com_2
   port: 20001
   protocol: udp
-  server: 51.159.107.20
+  server: 62.210.99.62
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
@@ -49,7 +49,7 @@ proxies:
   name: dongtaiwang.com_3
   port: 20001
   protocol: udp
-  server: 2001:bc8:1203:25::3
+  server: 2001:bc8:32d7:402::3
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
@@ -61,7 +61,7 @@ proxies:
   name: dongtaiwang.com_4
   port: 20001
   protocol: udp
-  server: 2001:bc8:1203:25::4
+  server: 2001:bc8:32d7:402::4
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
