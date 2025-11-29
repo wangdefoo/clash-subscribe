@@ -10,7 +10,7 @@ proxies:
   password: dongtaiwang.com
   port: 50088
   reduce-rtt: true
-  server: 62.210.99.62
+  server: ipv4.758733.xyz
   skip-cert-verify: true
   sni: bing.com
   type: tuic
@@ -37,7 +37,7 @@ proxies:
   name: dongtaiwang.com_2
   port: 20001
   protocol: udp
-  server: 62.210.99.62
+  server: ipv4.758733.xyz
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
