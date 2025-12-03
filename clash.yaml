@@ -75,8 +75,8 @@ proxies:
   min-idle-session: 0
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 8443
-  server: 62.210.10.140
+  port: 59901
+  server: 45.221.98.14
   skip-cert-verify: true
   type: anytls
   udp: true
