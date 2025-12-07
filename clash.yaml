@@ -181,14 +181,14 @@ proxies:
   congestion-controller: bbr
   name: dongtaiwang.com_0
   password: dongtaiwang.com
-  port: 55880
+  port: 29522
   reduce-rtt: true
   server: 51.158.194.63
   skip-cert-verify: true
-  sni: apple.com
+  sni: www.microsoft.com
   type: tuic
   udp-relay-mode: native
-  uuid: 95844688-9279-43ff-9f85-20e62b2cbcd4
+  uuid: b7dd1167-c5d9-45b9-ab75-83cd9e635537
 - alpn:
   - h3
   congestion-controller: bbr
