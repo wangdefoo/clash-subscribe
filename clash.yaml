@@ -194,53 +194,14 @@ proxies:
   congestion-controller: bbr
   name: dongtaiwang.com_1
   password: dongtaiwang.com
-  port: 55111
+  port: 18899
   reduce-rtt: true
-  server: 2001:bc8:1203:106::101
+  server: 2a14:7583:2963::6e
   skip-cert-verify: true
-  sni: bing.com
+  sni: apple.com
   type: tuic
   udp-relay-mode: native
-  uuid: 5ae31731-78ac-483a-b524-011d05072ef5
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_2
-  password: dongtaiwang.com
-  port: 55111
-  reduce-rtt: true
-  server: 2001:bc8:1203:106::102
-  skip-cert-verify: true
-  sni: bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 5ae31731-78ac-483a-b524-011d05072ef5
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_3
-  password: dongtaiwang.com
-  port: 55111
-  reduce-rtt: true
-  server: 2001:bc8:1203:106::103
-  skip-cert-verify: true
-  sni: bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 5ae31731-78ac-483a-b524-011d05072ef5
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_4
-  password: dongtaiwang.com
-  port: 55111
-  reduce-rtt: true
-  server: 2001:bc8:1203:106::104
-  skip-cert-verify: true
-  sni: bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 5ae31731-78ac-483a-b524-011d05072ef5
+  uuid: 186a249b-5bc1-48b0-b922-534d5639ccf7
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -316,9 +277,6 @@ proxy-groups:
   - dongtaiwang.com_0
   - dongtaiwang.com_0
   - dongtaiwang.com_1
-  - dongtaiwang.com_2
-  - dongtaiwang.com_3
-  - dongtaiwang.com_4
   - dongtaiwang.com_0
   - dongtaiwang.com_1
   - dongtaiwang.com_2
