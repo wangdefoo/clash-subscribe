@@ -207,6 +207,18 @@ proxies:
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: dongtaiwang.com_0
+  port: 23880
+  protocol: udp
+  server: 2001:bc8:32d7:14f::4
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: dongtaiwang.com_0
   port: 47821
   protocol: udp
   server: 2001:bc8:1203:106::200
@@ -277,6 +289,7 @@ proxy-groups:
   - dongtaiwang.com_0
   - dongtaiwang.com_0
   - dongtaiwang.com_1
+  - dongtaiwang.com_0
   - dongtaiwang.com_0
   - dongtaiwang.com_1
   - dongtaiwang.com_2
