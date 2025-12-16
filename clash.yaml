@@ -5,14 +5,15 @@ mode: Rule
 proxies:
 - alpn:
   - h3
+  auth-str: dongtaiwang.com
   down: 55 Mbps
   name: dongtaiwang.com_0
-  password: dongtaiwang.com
-  port: 32952
-  server: 51.158.194.63
+  port: 23008
+  protocol: udp
+  server: 5.178.101.33
   skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
+  sni: apple.com
+  type: hysteria
   up: 11 Mbps
 - client-fingerprint: chrome
   flow: null
