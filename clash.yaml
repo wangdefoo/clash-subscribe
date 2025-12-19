@@ -75,20 +75,6 @@ proxies:
   sni: apple.com
   type: hysteria
   up: 11 Mbps
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  min-idle-session: 0
-  name: dongtaiwang.com_0
-  password: dongtaiwang.com
-  port: 59901
-  server: 45.221.98.14
-  skip-cert-verify: true
-  type: anytls
-  udp: true
 - client-fingerprint: chrome
   flow: null
   name: dongtaiwang.com_1
@@ -163,18 +149,6 @@ proxies:
   type: tuic
   udp-relay-mode: native
   uuid: 66d37a65-7f6f-4e7c-a0f6-163bd917756a
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  name: dongtaiwang.com_0
-  port: 23880
-  protocol: udp
-  server: 2001:bc8:32d7:14f::4
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -183,12 +157,10 @@ proxy-groups:
   - dongtaiwang.com_2
   - dongtaiwang.com_3
   - dongtaiwang.com_4
-  - dongtaiwang.com_0
   - dongtaiwang.com_1
   - dongtaiwang.com_2
   - dongtaiwang.com_0
   - dongtaiwang.com_1
-  - dongtaiwang.com_0
   type: select
 rules:
 - MATCH,🚀 节点选择
