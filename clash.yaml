@@ -10,6 +10,18 @@ proxies:
   name: https://github.com/Alvin9999-newpac/fanqiang/wiki
   port: 23008
   protocol: udp
+  server: 89.144.35.30
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: dongtaiwang.com_1
+  port: 23008
+  protocol: udp
   server: 5.178.101.33
   skip-cert-verify: true
   sni: apple.com
@@ -39,18 +51,6 @@ proxies:
   type: vless
   udp: true
   uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  name: dongtaiwang.com_2
-  port: 20001
-  protocol: udp
-  server: ipv4.758733.xyz
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  up: 11 Mbps
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -186,8 +186,8 @@ proxy-groups:
 - name: 🚀 节点选择
   proxies:
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
+  - dongtaiwang.com_1
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
-  - dongtaiwang.com_2
   - dongtaiwang.com_3
   - dongtaiwang.com_4
   - dongtaiwang.com_0
