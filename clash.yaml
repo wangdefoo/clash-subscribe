@@ -5,12 +5,12 @@ mode: Rule
 proxies:
 - alpn:
   - h3
-  auth-str: dongtaiwang.com
+  auth-str: alvin9999.com
   down: 55 Mbps
-  name: https://github.com/Alvin9999-newpac/fanqiang/wiki
+  name: alvin9999.com
   port: 23008
   protocol: udp
-  server: 89.144.35.30
+  server: ip1.758733.xyz
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
@@ -19,7 +19,7 @@ proxies:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: dongtaiwang.com_1
+  name: alvin9999.com_1
   port: 23008
   protocol: udp
   server: 5.178.101.33
@@ -55,7 +55,7 @@ proxies:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: dongtaiwang.com_3
+  name: alvin9999.com_3
   port: 20001
   protocol: udp
   server: 2001:bc8:32d7:402::3
@@ -67,7 +67,7 @@ proxies:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: dongtaiwang.com_4
+  name: alvin9999.com_4
   port: 20001
   protocol: udp
   server: 2001:bc8:32d7:402::4
@@ -185,11 +185,11 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
+  - alvin9999.com
+  - alvin9999.com_1
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
-  - dongtaiwang.com_1
-  - https://github.com/Alvin9999-newpac/fanqiang/wiki
-  - dongtaiwang.com_3
-  - dongtaiwang.com_4
+  - alvin9999.com_3
+  - alvin9999.com_4
   - dongtaiwang.com_0
   - dongtaiwang.com_1
   - dongtaiwang.com_2
