@@ -146,32 +146,6 @@ proxies:
   username: dongtaiwang.com
 - alpn:
   - h3
-  congestion-controller: bbr
-  name: https://github.com/Alvin9999-newpac/fanqiang/wiki
-  password: dongtaiwang.com
-  port: 33457
-  reduce-rtt: true
-  server: 89.144.35.231
-  skip-cert-verify: true
-  sni: apple.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 66d37a65-7f6f-4e7c-a0f6-163bd917756a
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_1
-  password: dongtaiwang.com
-  port: 33457
-  reduce-rtt: true
-  server: 2a14:7583:299d::a
-  skip-cert-verify: true
-  sni: apple.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 66d37a65-7f6f-4e7c-a0f6-163bd917756a
-- alpn:
-  - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: https://github.com/Alvin9999-newpac/fanqiang/wiki
@@ -194,8 +168,6 @@ proxy-groups:
   - dongtaiwang.com_1
   - dongtaiwang.com_2
   - dongtaiwang.com_0
-  - https://github.com/Alvin9999-newpac/fanqiang/wiki
-  - dongtaiwang.com_1
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
   type: select
 rules:
