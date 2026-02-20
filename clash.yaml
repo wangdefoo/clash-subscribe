@@ -5,16 +5,17 @@ mode: Rule
 proxies:
 - alpn:
   - h3
-  auth-str: alvin9999.com
-  down: 55 Mbps
+  congestion-controller: bbr
   name: alvin9999.com
-  port: 23008
-  protocol: udp
+  password: dongtaiwang.com
+  port: 10088
+  request-timeout: 8000
   server: ip1.758733.xyz
   skip-cert-verify: true
   sni: apple.com
-  type: hysteria
-  up: 11 Mbps
+  type: tuic
+  udp-relay-mode: native
+  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
 - client-fingerprint: chrome
   flow: null
   name: dongtaiwang.com_1
