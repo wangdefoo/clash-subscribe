@@ -101,19 +101,18 @@ proxies:
   udp: true
   uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef
 - alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  min-idle-session: 0
+  - h3
+  congestion-controller: bbr
   name: dongtaiwang.com_0
-  password: dongtaiwang.com
-  port: 59901
-  server: 45.221.98.14
+  password: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
+  port: 41122
+  request-timeout: 8000
+  server: 157.254.223.24
   skip-cert-verify: true
-  type: anytls
-  udp: true
+  sni: www.microsoft.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
 - client-fingerprint: chrome
   flow: null
   name: dongtaiwang.com_1
