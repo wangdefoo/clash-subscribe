@@ -113,6 +113,18 @@ proxies:
   type: tuic
   udp-relay-mode: native
   uuid: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: https://github.com/Alvin9999-newpac/fanqiang/wiki
+  port: 45008
+  protocol: udp
+  server: 195.154.200.13
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  up: 11 Mbps
 - client-fingerprint: chrome
   flow: null
   name: dongtaiwang.com_1
@@ -171,6 +183,7 @@ proxy-groups:
   - alvin9999.com_3
   - alvin9999.com_4
   - dongtaiwang.com_0
+  - https://github.com/Alvin9999-newpac/fanqiang/wiki
   - dongtaiwang.com_1
   - dongtaiwang.com_0
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
