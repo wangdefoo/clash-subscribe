@@ -102,19 +102,6 @@ proxies:
   uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef
 - alpn:
   - h3
-  congestion-controller: bbr
-  name: dongtaiwang.com_0
-  password: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
-  port: 41122
-  request-timeout: 8000
-  server: 157.254.223.24
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
-- alpn:
-  - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: https://github.com/Alvin9999-newpac/fanqiang/wiki
@@ -153,6 +140,19 @@ proxies:
   - h3
   congestion-controller: bbr
   name: dongtaiwang.com_0
+  password: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
+  port: 41122
+  request-timeout: 8000
+  server: 157.254.223.24
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
+- alpn:
+  - h3
+  congestion-controller: bbr
+  name: dongtaiwang.com_0
   password: 6845cb43-4b8d-49e8-a011-1051d6c4d2ae
   port: 11540
   request-timeout: 8000
@@ -182,9 +182,9 @@ proxy-groups:
   - dongtaiwang.com_2
   - alvin9999.com_3
   - alvin9999.com_4
-  - dongtaiwang.com_0
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
   - dongtaiwang.com_1
+  - dongtaiwang.com_0
   - dongtaiwang.com_0
   - https://github.com/Alvin9999-newpac/fanqiang/wiki
   type: select
