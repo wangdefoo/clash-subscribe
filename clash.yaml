@@ -6,7 +6,7 @@ proxies:
 - alpn:
   - h3
   congestion-controller: bbr
-  name: alvin9999.com
+  name: https://github.com/Alvin9999-newpac/fanqiang
   password: dongtaiwang.com
   port: 10088
   request-timeout: 8000
@@ -70,7 +70,7 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
-  - alvin9999.com
+  - https://github.com/Alvin9999-newpac/fanqiang
   - dongtaiwang.com_0
   - dongtaiwang.com_0
   - dongtaiwang.com_0
