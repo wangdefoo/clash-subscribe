@@ -19,7 +19,7 @@ proxies:
 - alpn:
   - h3
   congestion-controller: bbr
-  name: dongtaiwang.com_0
+  name: github.com/Alvin9999-newpac/fanqiang
   password: dongtaiwang.com
   port: 33887
   request-timeout: 8000
@@ -32,7 +32,7 @@ proxies:
 - alpn:
   - h3
   congestion-controller: bbr
-  name: dongtaiwang.com_0
+  name: github.com/Alvin9999-newpac/fanqiang
   password: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
   port: 41122
   request-timeout: 8000
@@ -45,7 +45,7 @@ proxies:
 - alpn:
   - h3
   congestion-controller: bbr
-  name: dongtaiwang.com_0
+  name: github.com/Alvin9999-newpac/fanqiang
   password: 6845cb43-4b8d-49e8-a011-1051d6c4d2ae
   port: 11540
   request-timeout: 8000
@@ -59,7 +59,7 @@ proxies:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: https://github.com/Alvin9999-newpac/fanqiang/wiki
+  name: github.com/Alvin9999-newpac/fanqiang
   port: 54177
   protocol: udp
   server: 2a14:7584:d097::a
@@ -71,10 +71,10 @@ proxy-groups:
 - name: 🚀 节点选择
   proxies:
   - https://github.com/Alvin9999-newpac/fanqiang
-  - dongtaiwang.com_0
-  - dongtaiwang.com_0
-  - dongtaiwang.com_0
-  - https://github.com/Alvin9999-newpac/fanqiang/wiki
+  - github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
   type: select
 rules:
 - MATCH,🚀 节点选择
