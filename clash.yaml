@@ -33,15 +33,15 @@ proxies:
   - h3
   congestion-controller: bbr
   name: github.com/Alvin9999-newpac/fanqiang
-  password: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
-  port: 41122
+  password: b35b50d1-7830-4a68-94db-349c2d2f8e43
+  port: 42487
   request-timeout: 8000
-  server: 157.254.223.24
+  server: 178.18.147.199
   skip-cert-verify: true
   sni: www.microsoft.com
   type: tuic
   udp-relay-mode: native
-  uuid: 2aec7bfd-4178-4ee5-9bc5-fe4c241fdc15
+  uuid: b35b50d1-7830-4a68-94db-349c2d2f8e43
 - alpn:
   - h3
   congestion-controller: bbr
