@@ -20,6 +20,19 @@ proxies:
   - h3
   congestion-controller: bbr
   name: github.com/Alvin9999-newpac/fanqiang
+  password: dongtaiwang.com
+  port: 33887
+  request-timeout: 8000
+  server: 163.172.116.154
+  skip-cert-verify: true
+  sni: bing.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 9adb384a-0f16-4501-a8f3-b6b2556fce87
+- alpn:
+  - h3
+  congestion-controller: bbr
+  name: github.com/Alvin9999-newpac/fanqiang
   password: b35b50d1-7830-4a68-94db-349c2d2f8e43
   port: 42487
   request-timeout: 8000
@@ -29,6 +42,19 @@ proxies:
   type: tuic
   udp-relay-mode: native
   uuid: b35b50d1-7830-4a68-94db-349c2d2f8e43
+- alpn:
+  - h3
+  congestion-controller: bbr
+  name: https://github.com/Alvin9999-newpac/fanqiang
+  password: dongtaiwang.com
+  port: 30006
+  request-timeout: 8000
+  server: 5.178.101.117
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 36106e0f-4d9a-470b-a3fd-535f3b7a1e92
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -46,6 +72,8 @@ proxy-groups:
   proxies:
   - https://github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
+  - https://github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   type: select
 rules:
