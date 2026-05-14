@@ -18,17 +18,16 @@ proxies:
   uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
 - alpn:
   - h3
-  congestion-controller: bbr
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
-  password: dongtaiwang.com
-  port: 33887
-  request-timeout: 8000
-  server: 163.172.116.154
+  port: 36699
+  protocol: udp
+  server: 163.172.117.163
   skip-cert-verify: true
   sni: bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 9adb384a-0f16-4501-a8f3-b6b2556fce87
+  type: hysteria
+  up: 11 Mbps
 - alpn:
   - h3
   congestion-controller: bbr
