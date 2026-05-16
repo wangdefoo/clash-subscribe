@@ -5,17 +5,16 @@ mode: Rule
 proxies:
 - alpn:
   - h3
-  congestion-controller: bbr
-  name: https://github.com/Alvin9999-newpac/fanqiang
-  password: dongtaiwang.com
-  port: 10088
-  request-timeout: 8000
-  server: ip1.758733.xyz
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  down: 55 Mbps
+  name: github.com/Alvin9999-newpac/fanqiang
+  port: 10066
+  protocol: udp
+  server: 62.210.29.98
   skip-cert-verify: true
-  sni: apple.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -56,7 +55,7 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
-  - https://github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - https://github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
