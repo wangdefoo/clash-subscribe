@@ -3,17 +3,14 @@ log-level: info
 mixed-port: 7890
 mode: Rule
 proxies:
-- alpn:
-  - h3
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  down: 55 Mbps
+- down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
-  port: 10066
-  protocol: udp
-  server: 62.210.29.98
+  password: github.com/Alvin9999-newpac/fanqiang
+  port: 64772
+  server: 62.210.124.132
   skip-cert-verify: true
   sni: bing.com
-  type: hysteria
+  type: hysteria2
   up: 11 Mbps
 - alpn:
   - h3
