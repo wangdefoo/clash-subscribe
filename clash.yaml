@@ -6,10 +6,10 @@ proxies:
 - down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
   password: github.com/Alvin9999-newpac/fanqiang
-  port: 64772
-  server: 62.210.124.132
-  skip-cert-verify: true
-  sni: bing.com
+  port: 18271
+  server: clash-ip1.934618.xyz
+  skip-cert-verify: false
+  sni: clash-ip1.934618.xyz
   type: hysteria2
   up: 11 Mbps
 - alpn:
