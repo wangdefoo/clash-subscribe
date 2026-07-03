@@ -3,14 +3,17 @@ log-level: info
 mixed-port: 7890
 mode: Rule
 proxies:
-- down: 55 Mbps
+- alpn:
+  - h3
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
-  password: github.com/Alvin9999-newpac/fanqiang
-  port: 18271
-  server: clash-ip1.934618.xyz
-  skip-cert-verify: false
-  sni: clash-ip1.934618.xyz
-  type: hysteria2
+  port: 23556
+  protocol: udp
+  server: 62.210.70.191
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
   up: 11 Mbps
 - alpn:
   - h3
