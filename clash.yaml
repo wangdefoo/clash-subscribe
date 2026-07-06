@@ -4,6 +4,32 @@ mixed-port: 7890
 mode: Rule
 proxies:
 - alpn:
+  - h2
+  - http/1.1
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  min-idle-session: 5
+  name: https://github.com/Alvin9999-newpac/fanqiang
+  password: github.com/Alvin9999-newpac/fanqiang
+  port: 22556
+  server: 198.200.57.154
+  skip-cert-verify: true
+  sni: bing.com
+  type: anytls
+  udp: true
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: github.com/Alvin9999-newpac/fanqiang
+  port: 36699
+  protocol: udp
+  server: 163.172.117.163
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
   - h3
   auth-str: github.com/Alvin9999-newpac/fanqiang
   down: 55 Mbps
@@ -20,31 +46,6 @@ proxies:
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
-  port: 36699
-  protocol: udp
-  server: 163.172.117.163
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: https://github.com/Alvin9999-newpac/fanqiang
-  password: dongtaiwang.com
-  port: 30006
-  request-timeout: 8000
-  server: 5.178.101.117
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 36106e0f-4d9a-470b-a3fd-535f3b7a1e92
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
   port: 54177
   protocol: udp
   server: 2a14:7584:d097::a
@@ -55,9 +56,9 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
-  - github.com/Alvin9999-newpac/fanqiang
-  - github.com/Alvin9999-newpac/fanqiang
   - https://github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
+  - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   type: select
 rules:
