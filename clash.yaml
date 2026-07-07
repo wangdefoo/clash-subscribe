@@ -4,19 +4,17 @@ mixed-port: 7890
 mode: Rule
 proxies:
 - alpn:
-  - h2
-  - http/1.1
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  min-idle-session: 5
-  name: https://github.com/Alvin9999-newpac/fanqiang
-  password: github.com/Alvin9999-newpac/fanqiang
-  port: 22556
-  server: 198.200.57.154
+  - h3
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  down: 55 Mbps
+  name: github.com/Alvin9999-newpac/fanqiang
+  port: 23556
+  protocol: udp
+  server: 62.210.70.191
   skip-cert-verify: true
   sni: bing.com
-  type: anytls
-  udp: true
+  type: hysteria
+  up: 11 Mbps
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -25,18 +23,6 @@ proxies:
   port: 36699
   protocol: udp
   server: 163.172.117.163
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
-- alpn:
-  - h3
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
-  port: 23556
-  protocol: udp
-  server: 62.210.70.191
   skip-cert-verify: true
   sni: bing.com
   type: hysteria
@@ -56,7 +42,6 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
-  - https://github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
