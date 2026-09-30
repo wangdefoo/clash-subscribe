@@ -2,12 +2,13 @@ allow-lan: true
 log-level: info
 mixed-port: 7890
 mode: Rule
+
 proxies:
 - alpn:
   - h3
   auth-str: github.com/Alvin9999-newpac/fanqiang
   down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
+  name: Hysteria-1
   port: 23556
   protocol: udp
   server: 62.210.70.191
@@ -15,11 +16,12 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
+
 - alpn:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
+  name: Hysteria-2
   port: 36699
   protocol: udp
   server: 163.172.117.163
@@ -27,11 +29,12 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
+
 - alpn:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
+  name: Hysteria-IPv6
   port: 54177
   protocol: udp
   server: 2a14:7584:d097::a
@@ -39,12 +42,14 @@ proxies:
   sni: apple.com
   type: hysteria
   up: 11 Mbps
+
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
-  - github.com/Alvin9999-newpac/fanqiang
-  - github.com/Alvin9999-newpac/fanqiang
-  - github.com/Alvin9999-newpac/fanqiang
+  - Hysteria-1
+  - Hysteria-2
+  - Hysteria-IPv6
   type: select
+
 rules:
 - MATCH,🚀 节点选择
