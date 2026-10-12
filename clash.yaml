@@ -20,6 +20,18 @@ proxies:
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
+  port: 36699
+  protocol: udp
+  server: 163.172.117.163
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: github.com/Alvin9999-newpac/fanqiang
   port: 54177
   protocol: udp
   server: 2a14:7584:d097::a
@@ -30,6 +42,7 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
+  - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   type: select
