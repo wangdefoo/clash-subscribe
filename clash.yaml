@@ -5,10 +5,10 @@ mode: Rule
 proxies:
 - alpn:
   - h3
-  auth-str: github.com/Alvin9999-newpac/fanqiang
+  auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: github.com/Alvin9999-newpac/fanqiang
-  port: 23556
+  name: https://github.com/Alvin9999-newpac/fanqiang
+  port: 24667
   protocol: udp
   server: 62.210.70.191
   skip-cert-verify: true
@@ -29,6 +29,18 @@ proxies:
   up: 11 Mbps
 - alpn:
   - h3
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  down: 55 Mbps
+  name: github.com/Alvin9999-newpac/fanqiang
+  port: 23556
+  protocol: udp
+  server: 62.210.70.191
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
+  - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
   name: github.com/Alvin9999-newpac/fanqiang
@@ -42,6 +54,7 @@ proxies:
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
+  - https://github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
   - github.com/Alvin9999-newpac/fanqiang
