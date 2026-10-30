@@ -10,7 +10,7 @@ proxies:
   name: https://github.com/Alvin9999-newpac/fanqiang
   port: 24667
   protocol: udp
-  server: 62.210.70.191
+  server: 62.210.28.175
   skip-cert-verify: true
   sni: bing.com
   type: hysteria
